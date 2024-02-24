@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cart</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Oleo+Script:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="PorterSansBlock-Regular"
+      href="fonts/PorterSansBlock-Regular.ttf"
+    />
+    <link rel="sodo-sans-6" href="fonts/sodo-sans-6.ttf" />
+    <link rel="finalPr" href="finalPr.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+    />
+  </head>
+  <body>
+    <style>
+      body {
+        background: #1c4e42;
+      }
+      .navbar {
+        display: flex;
+        justify-content: space-between;
+        background: #c8733b;
+        height: 120px;
+        /* overflow: hidden; */
+        z-index: 10;
+      }
+      .navbar-brand {
+        margin-left: 25px;
+      }
+      .CoffeeTea {
+        width: 541px;
+        height: 48px;
+        left: 143px;
+        top: 33px;
+        position: absolute;
+      }
+      .coffee {
+        color: #713c18;
+        font-size: 33px;
+        font-family: "Porter Sans Block";
+        font-weight: 400;
+        /* word-wrap: break-word; */
+        text-align: center;
+      }
+      .and {
+        color: #713c18;
+        font-size: 33px;
+        font-family: Playfair Display;
+        font-weight: 400;
+        text-align: center;
+        /* word-wrap: break-word; */
+      }
+      /* .tea {
+          color: #713c18;
+          font-size: 33px;
+          font-family: Porter Sans Block;
+          font-weight: 400;
+          word-wrap: break-word; }*/
+
+      .logoimg {
+        width: 104px;
+        height: 100px;
+      }
+      .menu {
+        margin-right: 25px;
+      }
+      .nav-item {
+        /* width: 80px;
+          height: 44px;
+          top: 40px;
+          position: absolute; */
+        color: #713c18;
+        font-size: 30px;
+        font-family: Oleo Script;
+        font-weight: 400;
+        /* word-wrap: break-word; */
+      }
+      .nav-link {
+        color: currentColor;
+      }
+      .navlink.active a {
+        color: red;
+      }
+      /* .cart {
+          width: 80px;
+          height: 38px;
+          left: 95%;
+          top: 40px;
+          position: absolute;
+          color: #713c18;
+          font-size: 30px;
+          font-family: Oleo Script;
+          font-weight: 400;
+          word-wrap: break-word;
+          text-align: center;
+        } */
+      .table_custom {
+        --bs-table-bg: transparent !important;
+      }
+
+      @media screen and (max-width: 599px) {
+        .coffee,
+        .and,
+        .tea {
+          display: none;
+        }
+      }
+    </style>
+    <nav class="navbar navbar-expand-lg fixed-top">
+      <div class="container-fluid">
+        <div class="navbar-brand" href="#">
+          <div class="left flex-lg-row">
+            <a class="navbar-brand" href="final-landing.html">
+              <img
+                class="logoimg"
+                src="assest/pngtree-coffee-logo-design-png-image_6352424-removebg-preview.png"
+                alt="logo"
+              />
+            </a>
+            <span class="coffee">Coffee</span>
+            <span class="and">&</span>
+            <span class="coffee">Tea</span>
+          </div>
+        </div>
+        <button
+          class="navbar-toggler shadow-none border-0"
+          type="button"
+          data-bs-toggle="offcanvas"
+          data-bs-target="#offcanvasNavbar"
+          aria-controls="offcanvasNavbar"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div
+          class="offcanvas offcanvas-end"
+          tabindex="-1"
+          id="offcanvasNavbar"
+          aria-labelledby="offcanvasNavbarLabel"
+        >
+          <div class="offcanvas-header">
+            <!-- <h5 class="offcanvas-title" id="offcanvasNavbarLabel"></h5> -->
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="offcanvas"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="offcanvas-body">
+            <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+              <li class="nav-item">
+                <a class="nav-link" aria-current="page" href="menu-page.html"
+                  >Menu</a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" href="cart.html">Cart</a>
+              </li>
+              <!-- <li class="nav-item dropdown">
+                <a
+                  class="nav-link dropdown-toggle"
+                  href="#"
+                  role="button"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
+                >
+                  Dropdown
+                </a>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="#">Action</a></li>
+                  <li><a class="dropdown-item" href="#">Another action</a></li>
+                  <li>
+                    <hr class="dropdown-divider" />
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="#">Something else here</a>
+                  </li>
+                </ul>
+              </li> -->
+            </ul>
+            <!-- <form class="d-flex mt-3" role="search">
+              <input
+                class="form-control me-2"
+                type="search"
+                placeholder="Search"
+                aria-label="Search"
+              />
+              <button class="btn btn-outline-success" type="submit">
+                Search
+              </button>
+            </form> -->
+          </div>
+        </div>
+      </div>
+    </nav>
+    <!-- shopping cart -->
+    <section class="pt-5 pb-5" style="margin-top: 80px">
+      <div class="container">
+        <div class="row w-100">
+          <div class="col-lg-12 col-md-12 col-12">
+            <h3 class="display-5 mb-2 text-center text-light">
+              <strong>YOUR ORDER</strong>
+            </h3>
+            <p class="mb-5 text-center">
+              <i class="text-info font-weight-bold">3</i> items in your cart
+            </p>
+            <table
+              id="shoppingCart"
+              class="table table-condensed table-responsive table_custom"
+            >
+              <thead>
+                <tr>
+                  <th class="text-light" style="width: 60%">Product</th>
+                  <th class="text-light" style="width: 12%">Price</th>
+                  <th class="text-light" style="width: 10%">Quantity</th>
+                  <th class="text-light" style="width: 16%"></th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td data-th="cart-items">
+                    <div class="row">
+                      <div class="col-md-3 text-left">
+                        <img
+                          src="assest/Toffee-Nut-Cream-Cold-Brew-.jpeg"
+                          alt=""
+                          class="img-fluid d-none d-md-block rounded-circle mb-2 shadow"
+                        />
+                      </div>
+                      <div class="col-md-9 text-left mt-sm-2">
+                        <h4 class="text-light">Product Name</h4>
+                        <p class="text-light font-weight-light">
+                          Brand &amp; Name
+                        </p>
+                      </div>
+                    </div>
+                  </td>
+                  <td class="text-light" data-th="Price">$49.00</td>
+                  <td data-th="Quantity">
+                    <input
+                      type="number"
+                      class="form-control form-control-lg text-light text-center bg-transparent border-0 shadow-none"
+                      value="1"
+                    />
+                  </td>
+                  <td class="actions" data-th="">
+                    <div class="text-right">
+                      <!-- <button
+                        class="btn btn-white border-secondary bg-white btn-md mb-2"
+                      >
+                        <i class="fas fa-sync"></i>
+                      </button> -->
+                      <button
+                        class="btn btn-dark border-secondary bg-transparent border-0 btn-lg mb-2"
+                      >
+                        <i class="fa-trash"><i class="bi bi-trash"></i></i>
+                      </button>
+                    </div>
+                  </td>
+                </tr>
+                <!-- <tr>
+                  <td data-th="Product">
+                    <div class="row">
+                      <div class="col-md-3 text-left">
+                        <img
+                          src="https://via.placeholder.com/250x250/5fa9f8/ffffff"
+                          alt=""
+                          class="img-fluid d-none d-md-block rounded mb-2 shadow"
+                        />
+                      </div>
+                      <div class="col-md-9 text-left mt-sm-2">
+                        <h4>Product Name</h4>
+                        <p class="font-weight-light">Brand &amp; Name</p>
+                      </div>
+                    </div>
+                  </td>
+                  <td data-th="Price">$49.00</td>
+                  <td data-th="Quantity">
+                    <input
+                      type="number"
+                      class="form-control form-control-lg text-center"
+                      value="1"
+                    />
+                  </td>
+                  <td class="actions" data-th="">
+                    <div class="text-right">
+                      <button
+                        class="btn btn-white border-secondary bg-white btn-md mb-2"
+                      >
+                        <i class="fas fa-sync"></i>
+                      </button>
+                      <button
+                        class="btn btn-white border-secondary bg-white btn-md mb-2"
+                      >
+                        <i class="fas fa-trash"></i>
+                      </button>
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <td data-th="Product">
+                    <div class="row">
+                      <div class="col-md-3 text-left">
+                        <img
+                          src="https://via.placeholder.com/250x250/5fa9f8/ffffff"
+                          alt=""
+                          class="img-fluid d-none d-md-block rounded mb-2 shadow"
+                        />
+                      </div>
+                      <div class="col-md-9 text-left mt-sm-2">
+                        <h4>Product Name</h4>
+                        <p class="font-weight-light">Brand &amp; Name</p>
+                      </div>
+                    </div>
+                  </td>
+                  <td data-th="Price">$49.00</td>
+                  <td data-th="Quantity">
+                    <input
+                      type="number"
+                      class="form-control form-control-lg text-center"
+                      value="1"
+                    />
+                  </td>
+                  <td class="actions" data-th="">
+                    <div class="text-right">
+                      <button
+                        class="btn btn-white border-secondary bg-white btn-md mb-2"
+                      >
+                        <i class="fas fa-sync"></i>
+                      </button>
+                      <button
+                        class="btn btn-white border-secondary bg-white btn-md mb-2"
+                      >
+                        <i class="fas fa-trash"></i>
+                      </button>
+                    </div>
+                  </td>
+                </tr> -->
+              </tbody>
+            </table>
+            <div class="float-right text-right">
+              <h4 class="text-light">Subtotal:</h4>
+              <h1 class="text-light">$99.00</h1>
+            </div>
+          </div>
+        </div>
+        <div class="row mt-4 d-flex align-items-center">
+          <div class="col-sm-6 order-md-2 text-right">
+            <a href="#" class="btn btn-primary mb-4 btn-lg pl-5 pr-5"
+              >Checkout</a
+            >
+          </div>
+          <div class="col-sm-6 mb-3 mb-m-1 order-md-1 text-md-left">
+            <a href="menu-page.html">
+              <i class="fas fa-arrow-left mr-2"></i> Back to Menu</a
+            >
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+      crossorigin="anonymous"
+    ></script>
+    <script src="cart.js"></script>
+  </body>
+</html>

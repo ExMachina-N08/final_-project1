@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Coffee and Tea</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Oleo+Script:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="PorterSansBlock-Regular"
+      href="fonts/PorterSansBlock-Regular.ttf"
+    />
+    <link rel="sodo-sans-6" href="fonts/sodo-sans-6.ttf" />
+    <link rel="finalPr" href="finalPr.css" />
+  </head>
+  <body>
+    <style>
+      /* * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      } */
+      body {
+        background: #1c4e42;
+      }
+      .navbar {
+        display: flex;
+        justify-content: space-between;
+        background: #c8733b;
+        height: 120px;
+        /* overflow: hidden; */
+        z-index: 10;
+      }
+      .navbar-brand {
+        margin-left: 25px;
+      }
+      .CoffeeTea {
+        width: 541px;
+        height: 48px;
+        left: 143px;
+        top: 33px;
+        position: absolute;
+      }
+      .coffee {
+        color: #713c18;
+        font-size: 33px;
+        font-family: "Porter Sans Block";
+        font-weight: 400;
+        /* word-wrap: break-word; */
+        text-align: center;
+      }
+      .and {
+        color: #713c18;
+        font-size: 33px;
+        font-family: Playfair Display;
+        font-weight: 400;
+        text-align: center;
+        /* word-wrap: break-word; */
+      }
+      /* .tea {
+          color: #713c18;
+          font-size: 33px;
+          font-family: Porter Sans Block;
+          font-weight: 400;
+          word-wrap: break-word; }*/
+
+      .logoimg {
+        width: 104px;
+        height: 100px;
+      }
+      .menu {
+        margin-right: 25px;
+      }
+      .nav-item {
+        /* width: 80px;
+          height: 44px;
+          top: 40px;
+          position: absolute; */
+        color: #713c18;
+        font-size: 30px;
+        font-family: Oleo Script;
+        font-weight: 400;
+        /* word-wrap: break-word; */
+      }
+      .nav-link {
+        color: currentColor;
+      }
+      .navlink.active a {
+        color: red;
+      }
+      /* .cart {
+          width: 80px;
+          height: 38px;
+          left: 95%;
+          top: 40px;
+          position: absolute;
+          color: #713c18;
+          font-size: 30px;
+          font-family: Oleo Script;
+          font-weight: 400;
+          word-wrap: break-word;
+          text-align: center;
+        } */
+      .coffee-cup {
+        width: 1204.05px;
+        height: 1084.12px;
+        left: 31%;
+        bottom: 0px;
+        position: absolute;
+        border-radius: 19px;
+      }
+      .header1 {
+        width: 535px;
+        height: 468px;
+        left: 175px;
+        top: 294px;
+        position: absolute;
+      }
+      .quote {
+        color: #e5ddca;
+        font-size: 100px;
+        font-family: Oleo Script;
+        font-weight: 400;
+        word-wrap: break-word;
+        width: 819px;
+        height: 280px;
+        text-shadow: 5px 2px 8px rgb(36, 35, 35);
+      }
+      .logo {
+        width: 104px;
+        height: 100px;
+        left: 28px;
+        top: 7px;
+        position: absolute;
+        justify-content: center;
+        align-items: center;
+        display: inline-flex;
+      }
+      .logoimg {
+        width: 104px;
+        height: 100px;
+      }
+      .btn {
+        display: inline-block;
+        text-decoration: none;
+        color: #ffffff;
+        background: #c8733b;
+        /*box-shadow (create shadow in box): right, down, shadow #color code*/
+
+        transition: 0.3s;
+        /* transform(created moving animation): translate[moving direction]: (- mean move left, - mean move up) */
+        transform: translate(2px, 2px);
+        border: none;
+        width: 240px;
+        height: 71px;
+        margin-left: 361px;
+        margin-top: 715px;
+        /* position: absolute; */
+        /* box-shadow: 2px 4px 5px rgba(0, 0, 0, 0.25); */
+        border-radius: 30px;
+        font-size: 40px;
+        font-family: "Oleo Script";
+        font-weight: normal;
+        transition: 0.3s;
+        cursor: pointer;
+      }
+      /* width: 240px;
+          height: 71px;
+          left: 56px;
+          top: 768px;
+          position: absolute;
+          box-shadow: 2px 4px 5px rgba(0, 0, 0, 0.25);
+          border-radius: 30px;
+          background-color: #c8733b; */
+      .btn:hover {
+        background: #f08b18;
+        box-shadow: 2px 4px 5px rgba(0, 0, 0, 0.25);
+        color: #ffffff;
+      }
+      /*btn:active (created pressed effect of btn)*/
+      .btn:active {
+        background-color: #ca7412;
+        /*inset created shadow effect inside button*/
+        box-shadow: inset 0px 2px 12px #ca7412;
+        transform: translate(3.5px, 5px);
+        transition: 0.1s;
+      }
+      @media screen and (max-width: 599px) {
+        .coffee,
+        .and,
+        .tea {
+          display: none;
+        }
+      }
+    </style>
+    <nav class="navbar navbar-expand-lg fixed-top">
+      <div class="container-fluid">
+        <div class="navbar-brand">
+          <div class="left flex-lg-row">
+            <a class="navbar-brand" href="final-landing.html">
+              <img
+                class="logoimg"
+                src="assest/pngtree-coffee-logo-design-png-image_6352424-removebg-preview.png"
+                alt="logo"
+              />
+            </a>
+            <span class="coffee">Coffee</span>
+            <span class="and">&</span>
+            <span class="coffee">Tea</span>
+          </div>
+        </div>
+        <button
+          class="navbar-toggler shadow-none border-0"
+          type="button"
+          data-bs-toggle="offcanvas"
+          data-bs-target="#offcanvasNavbar"
+          aria-controls="offcanvasNavbar"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div
+          class="offcanvas offcanvas-end"
+          tabindex="-1"
+          id="offcanvasNavbar"
+          aria-labelledby="offcanvasNavbarLabel"
+        >
+          <div class="offcanvas-header">
+            <!-- <h5 class="offcanvas-title" id="offcanvasNavbarLabel"></h5> -->
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="offcanvas"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="offcanvas-body">
+            <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+              <li class="nav-item">
+                <a class="nav-link" aria-current="page" href="menu-page.html"
+                  >Menu</a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="cart.html">Cart</a>
+              </li>
+              <!-- <li class="nav-item dropdown">
+                <a
+                  class="nav-link dropdown-toggle"
+                  href="#"
+                  role="button"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
+                >
+                  Dropdown
+                </a>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="#">Action</a></li>
+                  <li><a class="dropdown-item" href="#">Another action</a></li>
+                  <li>
+                    <hr class="dropdown-divider" />
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="#">Something else here</a>
+                  </li>
+                </ul>
+              </li> -->
+            </ul>
+            <!-- <form class="d-flex mt-3" role="search">
+              <input
+                class="form-control me-2"
+                type="search"
+                placeholder="Search"
+                aria-label="Search"
+              />
+              <button class="btn btn-outline-success" type="submit">
+                Search
+              </button>
+            </form> -->
+          </div>
+        </div>
+      </div>
+    </nav>
+    <img class="coffee-cup" src="assest/SeekPng.com_coffee-png_368227.png" />
+    <div class="header1">
+      <h1 class="quote">
+        Life Begins <br />
+        <span style="margin-left: 20%">After Coffee.</span><br />
+      </h1>
+      <p
+        style="
+          color: white;
+          font-size: 25px;
+          font-family: 'SoDo Sans Light';
+          /* font-weight: 600; */
+          line-height: 40px;
+          word-wrap: break-word;
+          text-align: center;
+          width: 117%;
+          height: 80px;
+        "
+      >
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse in
+        tortor tincidunt, rhoncus odio
+      </p>
+    </div>
+    <div class="order-button">
+      <a class="order" href="menu-page.html">
+        <button class="btn">Order Now</button>
+      </a>
+    </div>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
