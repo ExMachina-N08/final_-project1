@@ -3,7 +3,7 @@ const productsEl = document.querySelector(".row");
 
 //RENDER PRODUCT
 function renderProducts() {
-  products.forEach((product) => {
+  productList.forEach((product) => {
     productsEl.innerHTML += `<div class="col-12 col-sm-4 col-md-3 gx-3 gy-3">
           <div class="card">
             <img
