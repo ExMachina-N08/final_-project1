@@ -18,7 +18,7 @@ function renderProducts() {
               </p>
               <h5 class="card-text text-md-start">$${product.price}</h5>
               <div class="d-grid gap-2 d-md-flex justify-content-end">
-                <a href="#" class="btn btn-primary" onClick="addToCart(${product.id})" >Add to Cart</a>
+                <a class="btn btn-primary" onClick="addToCart(${product.id})" >Add to Cart</a>
               </div>
             </div>
           </div>
@@ -34,7 +34,7 @@ function addToCart(id) {
   if (cart.some((item) => item.id === id)) {
     alert("Product already in cart");
   } else {
-    const item = products.find((product) => product.id === id);
+    const item = productList.find((product) => product.id === id);
     // add unit quantity to cart
     cart.push({
       ...item,

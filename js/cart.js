@@ -1,5 +1,6 @@
 //select cart elements
-const cartItemEl = document.querySelector(".cart-items");
+const cartItemEl = document.querySelector(".basket");
+const removeButton = document.querySelectorAll(".remove");
 //get cart from local storage
 let listCart = JSON.parse(localStorage.getItem("CART")) || [];
 console.log(listCart);
@@ -10,10 +11,11 @@ function updateCart() {
 }
 //render cart items
 listCart.forEach((item) => {
-  cartItemEl.innerHTML += `<tr class="cart-items">
-            <td data-th="Product">
+  cartItemEl.innerHTML += `
+    <tr class="cart-items">
+        <td data-th="">
             <div class="row">
-                <div class="col-md-3 text-left">
+            <div class="col-md-3 text-left">
                 <img
                     src="${item.imgsScr}"
                     alt=""
@@ -28,7 +30,7 @@ listCart.forEach((item) => {
                 </div>
             </div>
             </td>
-            <td class="text-light" data-th="Price">${item.price}</td>
+            <td class="text-light" data-th="Price">$${item.price}</td>
             <td data-th="Quantity">
             <input
                 type="number"
@@ -44,11 +46,18 @@ listCart.forEach((item) => {
                 <i class="fas fa-sync"></i>
                 </button> -->
                 <button
-                class="btn btn-dark border-secondary bg-transparent border-0 btn-lg mb-2"
+                class="remove btn btn-dark border-secondary bg-transparent border-0 btn-lg mb-2"
                 >
                 <i class="fa-trash"><i class="bi bi-trash"></i></i>
                 </button>
             </div>
             </td>
         </tr>`;
+});
+//remove button
+removeButton.forEach((button) => {
+  button.addEventListener("click", () => {
+    let removeItem = button.cart - items;
+    item.remove;
+  });
 });
