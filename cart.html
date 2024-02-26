@@ -124,6 +124,20 @@
       .table_custom {
         --bs-table-bg: transparent !important;
       }
+      input {
+        text-align: center;
+        border: none;
+      }
+      input::-webkit-outer-spin-button,
+      input::-webkit-inner-spin-button {
+        /* display: none; <- Crashes Chrome on hover */
+        -webkit-appearance: none;
+        margin: 0; /* <-- Apparently some margin are still there even though it's hidden */
+      }
+
+      /* input[type="number"] {
+        -moz-appearance: textfield; 
+      } */
 
       @media screen and (max-width: 599px) {
         .coffee,
@@ -245,7 +259,7 @@
                 </tr>
               </thead>
               <tbody class="basket">
-                <tr>
+                <!-- <tr>
                   <td data-th="cart-items">
                     <div class="row">
                       <div class="col-md-3 text-left">
@@ -280,7 +294,7 @@
                       </button>
                     </div>
                   </td>
-                </tr>
+                </tr> -->
                 <!-- <tr>
                   <td data-th="Product">
                     <div class="row">
@@ -361,9 +375,9 @@
                 </tr> -->
               </tbody>
             </table>
-            <div class="float-right text-right">
+            <div class="float-right text-right subtotal">
               <h4 class="text-light">Subtotal:</h4>
-              <h1 class="text-light">$99.00</h1>
+              <h1 class="text-light subtotal">$99.00</h1>
             </div>
           </div>
         </div>
@@ -387,6 +401,7 @@
       integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
       crossorigin="anonymous"
     ></script>
+    <script src="js/productList.js"></script>
     <script src="js/cart.js"></script>
   </body>
 </html>
