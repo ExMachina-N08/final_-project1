@@ -27,7 +27,7 @@ function renderProducts() {
 }
 renderProducts();
 //cart array
-let cart = [];
+let cart = JSON.parse(localStorage.getItem("CART")) || [];
 //ADD TO CART
 function addToCart(id) {
   // check if product already exist in cart
