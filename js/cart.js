@@ -105,15 +105,6 @@ function removeItemFromCart(id) {
 
   updateCart(localStorage.setItem("CART", JSON.stringify(listCart)));
 }
-//increment and decrement
-// let increment = (item) => {
-//   console.log(item);
-// };
-
-// let decrement = (item) => {
-//   console.log(item);
-// };
-
 // change number of units
 function changeNumberOfUnits(action, id) {
   listCart = listCart.map((item) => {
@@ -134,23 +125,3 @@ function changeNumberOfUnits(action, id) {
   });
   updateCart(localStorage.setItem("CART", JSON.stringify(listCart)));
 }
-//remove button
-// removeButton.forEach((button) => {
-//   button.addEventListener("click", () => {
-//     let removeItem = button.cart - items;
-//     item.remove;
-//   });
-// });
-// let search = listCart.find((drink) => drink.id === listCart.id);
-// let quantity = item.quantity;
-// if (search.quantity === 0) {
-//   listCart.push({
-//     item: listCart.id,
-//     quantity: 1,
-//   });
-// } else if(action === "minus") {
-//         if (search.quantity > 1)
-//           (search.quantity -= 1),
-//         } else {
-//           search.quantity += 1;
-//         }

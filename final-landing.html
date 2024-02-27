@@ -104,10 +104,10 @@
       .navlink.active a {
         color: red;
       }
-      /* .cart {
-          width: 80px;
-          height: 38px;
-          left: 95%;
+      .cart {
+        /* width: 90px;
+        height: 50px; */
+        /* left: 95%;
           top: 40px;
           position: absolute;
           color: #713c18;
@@ -115,8 +115,8 @@
           font-family: Oleo Script;
           font-weight: 400;
           word-wrap: break-word;
-          text-align: center;
-        } */
+          text-align: center; */
+      }
       .coffee-cup {
         width: 1204.05px;
         height: 1084.12px;
@@ -201,6 +201,12 @@
         transform: translate(3.5px, 5px);
         transition: 0.1s;
       }
+      .order-item {
+        background-color: #e50037;
+        font-size: 12px;
+        color: #e5ddca;
+        font-style: normal;
+      }
       @media screen and (max-width: 599px) {
         .coffee,
         .and,
@@ -257,7 +263,7 @@
                   >Menu</a
                 >
               </li>
-              <li class="nav-item">
+              <li class="nav-item total">
                 <a class="nav-link" href="cart.html">Cart</a>
               </li>
               <!-- <li class="nav-item dropdown">
@@ -330,5 +336,7 @@
       integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
       crossorigin="anonymous"
     ></script>
+    <script src="/js/productList.js"></script>
+    <script src="/js/finalJs.js"></script>
   </body>
 </html>

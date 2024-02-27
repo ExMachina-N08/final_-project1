@@ -1,5 +1,6 @@
 // SELECT ELEMENT
 const productsEl = document.querySelector(".row");
+const totalItemEL = document.querySelector(".total");
 
 //RENDER PRODUCT
 function renderProducts() {
@@ -40,7 +41,52 @@ function addToCart(id) {
       ...item,
       quantity: 1,
     });
+
+    //update cart alert
+    let totalItems = 0;
+    cart.forEach((item) => {
+      totalItems += item.quantity;
+    });
+    if (totalItems === 0) {
+      totalItemEL.innerHTML = `
+      <li class="nav-item">
+      <a class="nav-link" href="cart.html">Cart</a>
+    </li>`;
+    } else {
+      totalItemEL.innerHTML = `
+    <li class="nav-item">
+          <a class="nav-link" href="cart.html">Cart
+          <i class="order-item rounded-circle"
+              style="padding-right: 3px; padding-left: 2px">${totalItems}</i>
+              </a>
+      </li>`;
+    }
   }
   //save cart to local storage
   localStorage.setItem("CART", JSON.stringify(cart));
 }
+//get cart from local storage
+let listCart = JSON.parse(localStorage.getItem("CART")) || [];
+//calculate and render subtotal
+function renderSubTotal() {
+  let totalItems = 0;
+
+  listCart.forEach((item) => {
+    totalItems += item.quantity;
+  });
+  if (totalItems === 0) {
+    totalItemEL.innerHTML = `
+    <li class="nav-item">
+    <a class="nav-link" href="cart.html">Cart</a>
+  </li>`;
+  } else {
+    totalItemEL.innerHTML = `
+   <li class="nav-item">
+        <a class="nav-link" href="cart.html">Cart
+        <i class="order-item rounded-circle"
+            style="padding-right: 3px; padding-left: 2px">${totalItems}</i>
+            </a>
+    </li>`;
+  }
+}
+renderSubTotal();
