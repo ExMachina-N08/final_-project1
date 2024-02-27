@@ -19,7 +19,7 @@ function renderProducts() {
               </p>
               <h5 class="card-text text-md-start">$${product.price}</h5>
               <div class="d-grid gap-2 d-md-flex justify-content-end">
-                <a class="btn btn-primary" onClick="addToCart(${product.id})" >Add to Cart</a>
+                <a class="btn btn-primary added" onClick="addToCart(${product.id});" >Add to Cart</a>
               </div>
             </div>
           </div>
@@ -41,7 +41,6 @@ function addToCart(id) {
       ...item,
       quantity: 1,
     });
-
     //update cart alert
     let totalItems = 0;
     cart.forEach((item) => {

@@ -40,9 +40,9 @@ function renderCartItem() {
               <div class="d-flex flex-row">
                   <button
                     class="btn btn-link px-2"
-                    onclick="this.parentNode.querySelector('input[type=number]').stepDown()">
+                    onclick="changeNumberOfUnits('minus', ${item.id})">
                   
-                    <i onclick="changeNumberOfUnits('minus', ${item.id})" class="bi bi-dash text-light"></i>
+                    <i class="bi bi-dash text-light"></i>
                   </button>
   
                   <input
@@ -56,9 +56,10 @@ function renderCartItem() {
                   />
   
                   <button
-                    class="btn btn-link px-2">
+                    class="btn btn-link px-2"
+                    onclick="changeNumberOfUnits('plus', ${item.id})">
                   
-                    <i onclick="changeNumberOfUnits('plus', ${item.id})" class="bi bi-plus text-light"></i>
+                    <i class="bi bi-plus text-light"></i>
                   </button>
                </div>
               </td>
@@ -67,7 +68,7 @@ function renderCartItem() {
                   <button
                   class="remove btn btn-dark border-secondary bg-transparent border-0 btn-lg mb-2"
                   >
-                  <i class="fa-trash"><i onclick="removeItemFromCart(${item.id})" class="bi bi-trash"></i></i>
+                  <i onclick="removeItemFromCart(${item.id})" class="bi bi-trash"></i>
                   </button>
               </div>
               </td>
