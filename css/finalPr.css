@@ -1,1 +1,282 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  background-image: url(/assest/background/coffee5.jpg);
+  min-height: 100vh;
+  background-size: cover;
+  background-repeat: no-repeat;
+  display: flex;
+  flex-direction: column;
+  backdrop-filter: blur(5px);
+  /* font-size: 0.625rem; */
+}
 
+footer {
+  margin-top: auto;
+}
+.navigation-bar {
+  height: 120px;
+}
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  /* background: #c8733b; */
+  height: 120px;
+  /* overflow: hidden; */
+  z-index: 10;
+}
+.navbar-brand {
+  margin-left: 25px;
+}
+.CoffeeTea {
+  width: 541px;
+  height: 48px;
+  left: 143px;
+  top: 33px;
+  position: absolute;
+}
+.coffee {
+  color: #04aa6d;
+  font-size: 33px;
+  font-family: "Porter Sans Block";
+  font-weight: 400;
+  /* word-wrap: break-word; */
+  text-align: center;
+}
+.and {
+  color: #04aa6d;
+  font-size: 33px;
+  font-family: Playfair Display;
+  font-weight: 400;
+  text-align: center;
+  /* word-wrap: break-word; */
+}
+/* .tea {
+      color: #04aa6d;
+      font-size: 33px;
+      font-family: Porter Sans Block;
+      font-weight: 400;
+      word-wrap: break-word; }*/
+
+.logoimg {
+  width: 104px;
+  height: 100px;
+}
+.menu {
+  margin-right: 25px;
+}
+.nav-item {
+  /* width: 80px;
+      height: 44px;
+      top: 40px;
+      position: absolute; */
+  color: #04aa6d;
+  font-size: 30px;
+  font-family: Oleo Script;
+  font-weight: 400;
+  /* word-wrap: break-word; */
+}
+.nav-link {
+  color: currentColor;
+}
+.navlink.active a {
+  color: red;
+}
+.quote {
+  color: #e5ddca;
+  /* font-size: 6.25rem; */
+  font-family: Oleo Script;
+  font-weight: 400;
+  word-wrap: break-word;
+  /* width: 81.9vh; */
+  /* height: 280px; */
+  /* text-shadow: 5px 2px 8px rgb(36, 35, 35); */
+}
+.after-coffee {
+  position: relative;
+  /* margin-left: 18%; */
+}
+.explain {
+  color: white;
+  /* font-size: 25px; */
+  font-family: "SoDo Sans Light";
+  /* font-weight: 600; */
+  /* line-height: 40px; */
+  word-wrap: break-word;
+  /* text-align: center; */
+  /* max-width: 75%; */
+  /* height: 80px; */
+}
+.logo {
+  width: 104px;
+  height: 100px;
+  left: 28px;
+  top: 7px;
+  position: absolute;
+  justify-content: center;
+  align-items: center;
+  display: inline-flex;
+}
+.logoimg {
+  width: 104px;
+  height: 100px;
+}
+.order-now {
+  /* display: inline-block; */
+  text-decoration: none;
+  color: #ffffff;
+  background: #c8733b;
+
+  /*box-shadow (create shadow in box): right, down, shadow #color code*/
+
+  transition: 0.3s;
+  /* transform(created moving animation): translate[moving direction]: (- mean move left, - mean move up) */
+  transform: translate(2px, 2px);
+  border: none;
+  width: 240px;
+  height: 71px;
+  /* margin-left: 361px;
+  margin-top: 715px; */
+  position: relative;
+  /* box-shadow: 2px 4px 5px rgba(0, 0, 0, 0.25); */
+  border-radius: 30px;
+  font-size: 40px;
+  font-family: "Oleo Script";
+  font-weight: normal;
+  transition: 0.3s;
+  cursor: pointer;
+}
+/* width: 240px;
+      height: 71px;
+      left: 56px;
+      top: 768px;
+      position: absolute;
+      box-shadow: 2px 4px 5px rgba(0, 0, 0, 0.25);
+      border-radius: 30px;
+      background-color: #c8733b; */
+.order-now:hover {
+  background: #f08b18;
+  box-shadow: 2px 4px 5px rgba(0, 0, 0, 0.25);
+  color: #ffffff;
+}
+/*btn:active (created pressed effect of btn)*/
+.order-now:active {
+  background-color: #ca7412;
+  /*inset created shadow effect inside button*/
+  box-shadow: inset 0px 2px 12px #ca7412;
+  transform: translate(3.5px, 5px);
+  transition: 0.1s;
+}
+.order-item {
+  background-color: #e50037;
+  font-size: 12px;
+  color: #e5ddca;
+  font-style: normal;
+}
+@media screen and (max-width: 983px) {
+  .offcanvas {
+    background: rgba(255, 255, 255, 0.1);
+    box-shadow: 0 25px 25px rgba(0, 0, 0, 0.2);
+    /* border: 2px solid rgba(255, 255, 255, 0.5); */
+    backdrop-filter: blur(5px);
+    height: 100vh;
+  }
+}
+@media screen and (max-width: 940px) {
+  .landing-qoute {
+    text-align: center;
+  }
+}
+
+@media only screen and (min-device-width: 481px) and (max-device-width: 1024px) and (orientation: portrait) {
+  intro {
+    min-height: 100vh;
+    min-width: 100vh;
+  }
+}
+@media screen and (max-width: 768px) {
+  .coffee-pics {
+    margin: auto;
+  }
+}
+@media screen and (max-width: 599px) {
+  body {
+    min-height: 100vh;
+  }
+  .coffee,
+  .and,
+  .tea {
+    display: none;
+  }
+  .intro {
+    display: flex;
+    flex-direction: column-reverse;
+  }
+  .coffee-pics {
+    text-align: center;
+    padding: 10px;
+    padding-top: 30px;
+  }
+  .img-fluid {
+    max-width: 85%;
+  }
+  .landing-qoute {
+    padding: 10px;
+    padding-bottom: 40px;
+  }
+  .quote {
+    font-size: 50px;
+  }
+  .explain {
+    padding-left: 23px;
+    padding-right: 23px;
+    padding-top: 15px;
+    padding-bottom: 10px;
+    font-size: 15px;
+  }
+  .order-now {
+    border-radius: 15px;
+  }
+  .logo {
+    left: 0px;
+    top: 7px;
+    position: absolute;
+    justify-content: center;
+    align-items: center;
+    display: inline-flex;
+  }
+  .navigation-bar {
+    height: 110px;
+  }
+  .logoimg {
+    width: 80px;
+    height: 80px;
+    margin-left: -30px;
+  }
+  /* .intro {
+    display: flex;
+    flex-direction: column;
+  } */
+}
+/* @media screen and (max-width: 1722px) {
+  .quote {
+    font-size: 80px;
+  }
+  .explain {
+    font-size: 22px;
+    line-height: 30px;
+  }
+  .coffee-cup {
+    max-width: 80%;
+    padding-right: 20%;
+  }
+  .order-now {
+    max-width: 230px;
+  }
+  .order-item {
+    max-width: fit-content;
+  }
+} */

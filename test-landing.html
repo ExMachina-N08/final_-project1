@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Coffee and Tea</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Oleo+Script:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="PorterSansBlock-Regular"
+      href="fonts/PorterSansBlock-Regular.ttf"
+    />
+    <link rel="sodo-sans-6" href="fonts/sodo-sans-6.ttf" />
+    <link rel="stylesheet" href="/css/finalPr.css" />
+  </head>
+  <body>
+    <div class="container-fluid d-flex flex-column">
+      <div class="navigation-bar">
+        <nav class="navbar navbar-expand-lg fixed-top">
+          <div class="container-fluid">
+            <div class="navbar-brand">
+              <div class="flex-lg-row">
+                <a class="navbar-brand" href="final-landing.html">
+                  <img
+                    class="logoimg"
+                    src="assest/pngtree-coffee-logo-design-png-image_6352424-removebg-preview.png"
+                    alt="logo"
+                  />
+                </a>
+                <span class="coffee">Coffee</span>
+                <span class="and">&</span>
+                <span class="coffee">Tea</span>
+              </div>
+            </div>
+            <button
+              class="navbar-toggler shadow-none border-0"
+              type="button"
+              data-bs-toggle="offcanvas"
+              data-bs-target="#offcanvasNavbar"
+              aria-controls="offcanvasNavbar"
+              aria-label="Toggle navigation"
+            >
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div
+              class="offcanvas offcanvas-end"
+              tabindex="-1"
+              id="offcanvasNavbar"
+              aria-labelledby="offcanvasNavbarLabel"
+            >
+              <div class="offcanvas-header">
+                <!-- <h5 class="offcanvas-title" id="offcanvasNavbarLabel"></h5> -->
+                <button
+                  type="button"
+                  class="btn-close"
+                  data-bs-dismiss="offcanvas"
+                  aria-label="Close"
+                ></button>
+              </div>
+              <div class="offcanvas-body">
+                <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+                  <li class="nav-item">
+                    <a
+                      class="nav-link"
+                      aria-current="page"
+                      href="menu-page.html"
+                      >Menu</a
+                    >
+                  </li>
+                  <li class="nav-item total">
+                    <a class="nav-link" href="cart.html">Cart</a>
+                  </li>
+                  <!-- <li class="nav-item dropdown">
+                      <a
+                        class="nav-link dropdown-toggle"
+                        href="#"
+                        role="button"
+                        data-bs-toggle="dropdown"
+                        aria-expanded="false"
+                      >
+                        Dropdown
+                      </a>
+                      <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="#">Action</a></li>
+                        <li><a class="dropdown-item" href="#">Another action</a></li>
+                        <li>
+                          <hr class="dropdown-divider" />
+                        </li>
+                        <li>
+                          <a class="dropdown-item" href="#">Something else here</a>
+                        </li>
+                      </ul>
+                    </li> -->
+                </ul>
+                <!-- <form class="d-flex mt-3" role="search">
+                    <input
+                      class="form-control me-2"
+                      type="search"
+                      placeholder="Search"
+                      aria-label="Search"
+                    />
+                    <button class="btn btn-outline-success" type="submit">
+                      Search
+                    </button>
+                  </form> -->
+              </div>
+            </div>
+          </div>
+        </nav>
+      </div>
+      <div
+        class="intro container d-xxl-flex d-lg-flex d-md-flex mt-xxl-3 mt-md-5 mb-xxl-4 mb-md-5 p-xl-4 pb-md-3"
+      >
+        <div
+          class="landing-qoute col-xxl-8 col-xl-6 col-lg-6 col-md-6 mt-xl-5 pe-md-3 ps-xl-2 p-sm-3"
+        >
+          <h1 class="quote display-2">
+            Enjoy Your <br />
+            <span class="after-coffee">Morning Coffee.</span>
+          </h1>
+
+          <p class="explain lead fs-2 fs-4 fs-5 fs-6 w-60">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
+            in tortor tincidunt, rhoncus odio
+          </p>
+          <button
+            class="order-now mt-xl-5 mt-md-3 mb-sm-5"
+            href="menu-page.html"
+          >
+            Order Now
+          </button>
+        </div>
+        <div id="carouselExampleIndicators" class="carousel slide">
+          <div class="carousel-indicators">
+            <button
+              type="button"
+              data-bs-target="#carouselExampleIndicators"
+              data-bs-slide-to="0"
+              class="active"
+              aria-current="true"
+              aria-label="Slide 1"
+            ></button>
+            <button
+              type="button"
+              data-bs-target="#carouselExampleIndicators"
+              data-bs-slide-to="1"
+              aria-label="Slide 2"
+            ></button>
+            <button
+              type="button"
+              data-bs-target="#carouselExampleIndicators"
+              data-bs-slide-to="2"
+              aria-label="Slide 3"
+            ></button>
+          </div>
+          <div class="carousel-inner">
+            <div
+              class="coffee-pics col-xxl-4 col-xl-5 col-lg-5 col-md-6 col-sm-10 mt-md-4 carousel-item active"
+            >
+              <img
+                src="/assest/caramel machiato.png"
+                class="d-block w-100"
+                alt="..."
+              />
+            </div>
+            <div
+              class="coffee-pics col-xxl-4 col-xl-5 col-lg-5 col-md-6 col-sm-10 mt-md-4 carousel-item"
+            >
+              <img
+                src="/assest/caramel machiato.png"
+                class="d-block w-100"
+                alt="..."
+              />
+            </div>
+            <div
+              class="coffee-pics col-xxl-4 col-xl-5 col-lg-5 col-md-6 col-sm-10 mt-md-4 carousel-item"
+            >
+              <img
+                src="/assest/caramel machiato.png"
+                class="d-block w-100"
+                alt="..."
+              />
+            </div>
+          </div>
+          <button
+            class="carousel-control-prev"
+            type="button"
+            data-bs-target="#carouselExampleIndicators"
+            data-bs-slide="prev"
+          >
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+          </button>
+          <button
+            class="carousel-control-next"
+            type="button"
+            data-bs-target="#carouselExampleIndicators"
+            data-bs-slide="next"
+          >
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+          </button>
+        </div>
+        <!-- <div
+          class="coffee-pics col-xxl-4 col-xl-5 col-lg-5 col-md-6 col-sm-10 mt-md-4"
+        >
+          <img
+            class="img-fluid rounded-2"
+            src="/assest/caramel machiato.png"
+            alt="img"
+          />
+        </div> -->
+      </div>
+    </div>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+      crossorigin="anonymous"
+    ></script>
+    <script src="/js/productList.js"></script>
+    <script src="/js/finalJs.js"></script>
+  </body>
+  <!-- <br />
+  <br />
+  <br />
+  <br />
+  <br /> -->
+
+  <!-- Remove the container if you want to extend the Footer to full width. -->
+  <!-- <div class="container-fluid my-5"> -->
+  <footer
+    class="text-white text-center text-lg-start"
+    style="background-color: #23242a"
+  >
+    <!-- Grid container -->
+    <div class="container p-4">
+      <!--Grid row-->
+      <div class="row mt-4">
+        <!--Grid column-->
+        <div class="col-lg-4 col-md-12 mb-4 mb-md-0">
+          <h5 class="text-uppercase mb-4">About company</h5>
+
+          <p>
+            At vero eos et accusamus et iusto odio dignissimos ducimus qui
+            blanditiis praesentium voluptatum deleniti atque corrupti.
+          </p>
+
+          <p>
+            Blanditiis praesentium voluptatum deleniti atque corrupti quos
+            dolores et quas molestias.
+          </p>
+
+          <div class="mt-4">
+            <!-- Facebook -->
+            <a type="button" class="btn btn-floating btn-warning btn-lg"
+              ><i class="fab fa-facebook-f"></i
+            ></a>
+            <!-- Dribbble -->
+            <a type="button" class="btn btn-floating btn-warning btn-lg"
+              ><i class="fab fa-dribbble"></i
+            ></a>
+            <!-- Twitter -->
+            <a type="button" class="btn btn-floating btn-warning btn-lg"
+              ><i class="fab fa-twitter"></i
+            ></a>
+            <!-- Google + -->
+            <a type="button" class="btn btn-floating btn-warning btn-lg"
+              ><i class="fab fa-google-plus-g"></i
+            ></a>
+            <!-- Linkedin -->
+          </div>
+        </div>
+        <!--Grid column-->
+
+        <!--Grid column-->
+        <div class="col-lg-4 col-md-6 mb-4 mb-md-0">
+          <h5 class="text-uppercase mb-4 pb-1">OUR STORE</h5>
+
+          <!-- <div class="form-outline form-white mb-4">
+            <input
+              type="text"
+              id="formControlLg"
+              class="form-control form-control-lg"
+            />
+            <label
+              class="form-label"
+              for="formControlLg"
+              style="margin-left: 0px"
+              >Search</label
+            >
+            <div class="form-notch">
+              <div class="form-notch-leading" style="width: 9px"></div>
+              <div class="form-notch-middle" style="width: 48.8px"></div>
+              <div class="form-notch-trailing"></div>
+            </div>
+          </div> -->
+
+          <ul class="fa-ul" style="margin-left: 1.65em">
+            <li class="mb-3">
+              <span class="fa-li"><i class="fas fa-home"></i></span
+              ><span class="ms-2">New York, NY 10012, US</span>
+            </li>
+            <li class="mb-3">
+              <span class="fa-li"><i class="fas fa-envelope"></i></span
+              ><span class="ms-2">info@example.com</span>
+            </li>
+            <li class="mb-3">
+              <span class="fa-li"><i class="fas fa-phone"></i></span
+              ><span class="ms-2">+ 01 234 567 88</span>
+            </li>
+            <li class="mb-3">
+              <span class="fa-li"><i class="fas fa-print"></i></span
+              ><span class="ms-2">+ 01 234 567 89</span>
+            </li>
+          </ul>
+        </div>
+        <!--Grid column-->
+
+        <!--Grid column-->
+        <div class="col-lg-4 col-md-6 mb-4 mb-md-0">
+          <h5 class="text-uppercase mb-4">Opening hours</h5>
+
+          <table class="table text-center text-white">
+            <tbody class="font-weight-normal">
+              <tr>
+                <td>Mon - Thu:</td>
+                <td>8am - 9pm</td>
+              </tr>
+              <tr>
+                <td>Fri - Sat:</td>
+                <td>8am - 1am</td>
+              </tr>
+              <tr>
+                <td>Sunday:</td>
+                <td>9am - 10pm</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <!--Grid column-->
+      </div>
+      <!--Grid row-->
+    </div>
+    <!-- Grid container -->
+
+    <!-- Copyright -->
+    <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2)">
+      © 2020 Copyright:
+      <a class="text-white" href="#">Lorem.com</a>
+    </div>
+    <!-- Copyright -->
+  </footer>
+  <!-- </div> -->
+  <!-- End of .container -->
+</html>
+<!-- <style>
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+    background: rgba(255, 255, 255, 0.1);
+    box-shadow: 0 25px 25px rgba(0, 0, 0, 0.2);
+    /* border: 2px solid rgba(255, 255, 255, 0.5); */
+    backdrop-filter: blur(5px);
+    height: 120px; /*
+    overflow: hidden; */
+    z-index: 10;
+  }
+
+  clip links
+  1. espresso-drip R-viewport:
+https://youtube.com/clip/Ugkxkeh7ekk3VIunSs_P-c_6qphSFAUBpf-Z?si=ehoDz8VxKHYBf550
+  2. espresso-drip R-viewport:
+  https://youtube.com/clip/UgkxXG4w23DxX1WRHgEGYwWmGs8d65cc1OgF?si=QUGhBn_ydvv68_Sq
+  3. single-drip Center-Viewport:
+  https://youtube.com/clip/UgkxFeNtjsbvChAHsoMYN9CGG3OwhIeb7aa5?si=_Mz-qov5cI4tPIlD
+  4. espresso flow Center-viewport:
+  https://youtube.com/clip/Ugkx26YzQCey2v0a9WVcCNIOSApU1eZxSYu6?si=nOIzeeBPVGBqBU4k
+  5. espresso milk blend macro L-viewport (0:23-0:26):
+  https://www.youtube.com/watch?v=Nu8kIIL-CDA&list=FL8oLUJYrUdirskqULpv6pCA&index=2
+  6. espresso-milk blend macro:
+  https://youtube.com/clip/UgkxFuD9nCQtnYDmcCuquGUo8TRth4tMj3UJ?si=3w3XcrrMz9EDyqe1
+  7. espresso blend macro text center:
+  https://youtube.com/clip/Ugkx7AbOQzDmuu7GbHRQjgSvtJ8ZiSqWbF4T?si=FMfO4La9I7LSggz6
+  https://youtube.com/clip/Ugkx3ov69BydiPcu6MGIZwWRtgJvEgVt-qqX?si=_wI29CkZ8RD56T7r
+  https://youtube.com/clip/Ugkx_SP7YlC5EuLmXd86s9ty0rqBzW5FfwI7?si=6__teRsv0ncc5539
+  8. hand grinding coffee:
+  https://youtube.com/clip/UgkxKhVUO8Qo-Cn-hdJUVFuDWsEnAYhrWV73?si=TcSO0CINffa-XIsl
+  9. coffee bean
+  https://www.youtube.com/watch?v=BkWsEvMg_Qc&list=PLdYUfVRB88HSjEyIxeBNfg-LaKcDEguD4&index=5
+  10.coffee bean L-R 
+  https://youtube.com/clip/Ugkxe6i9KfafxwsW9uWez1g7hF4hrxbPKupP?si=TF0BcRMxQCAIYmCo
+  11. coffee pouring:
+  https://www.youtube.com/watch?v=oNMbGnc2A0o
+  12. coffee final shot (0:22-0:29):
+  https://www.youtube.com/watch?v=44K7dSpWNZU
+</style> -->

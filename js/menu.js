@@ -5,7 +5,7 @@ const totalItemEL = document.querySelector(".total");
 //RENDER PRODUCT
 function renderProducts() {
   productList.forEach((product) => {
-    productsEl.innerHTML += `<div class="col-12 col-sm-4 col-md-3 gx-3 gy-3">
+    productsEl.innerHTML += `<div class="col-12 col-sm-4 col-md-3 gx-4 gy-4">
           <div class="card">
             <img
               src="${product.imgsScr}"
@@ -27,6 +27,7 @@ function renderProducts() {
   });
 }
 renderProducts();
+
 //cart array
 let cart = JSON.parse(localStorage.getItem("CART")) || [];
 //ADD TO CART
