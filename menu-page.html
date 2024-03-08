@@ -42,14 +42,16 @@
   <body>
     <style>
       body {
-        background: #1c4e42;
+        background: #1b4d41;
       }
       .navbar {
         display: flex;
         justify-content: space-between;
-        background: #c8733b;
-        height: 120px;
-        overflow: hidden;
+        background: rgba(255, 255, 255, 0.1);
+        box-shadow: 0 25px 25px rgba(0, 0, 0, 0.2);
+        backdrop-filter: blur(5px);
+        height: 100px;
+        /* overflow: hidden; */
         z-index: 10;
       }
       .navbar-brand {
@@ -63,7 +65,7 @@
         position: absolute;
       }
       .coffee {
-        color: #713c18;
+        color: #e5ddca;
         font-size: 33px;
         font-family: "Porter Sans Block";
         font-weight: 400;
@@ -71,7 +73,7 @@
         text-align: center;
       }
       .and {
-        color: #713c18;
+        color: #e5ddca;
         font-size: 33px;
         font-family: Playfair Display;
         font-weight: 400;
@@ -86,18 +88,19 @@
           word-wrap: break-word; }*/
 
       .logoimg {
-        width: 104px;
-        height: 100px;
+        width: 75px;
+        height: 90px;
+        padding-bottom: 20px;
       }
       .menu {
         margin-right: 25px;
       }
-      .nav-item {
+      .nav-link {
         /* width: 80px;
           height: 44px;
           top: 40px;
           position: absolute; */
-        color: #713c18;
+        color: #777;
         font-size: 25px;
         font-family: Sodo Sans;
         font-weight: 400;
@@ -106,6 +109,7 @@
 
       .nav-link:hover {
         color: #fff;
+        /* text-decoration: underline; */
       }
       .active {
         color: red !important;
@@ -132,6 +136,7 @@
         color: #e5ddca;
         margin-top: 10px;
       }
+
       .card {
         box-shadow: 0px 2px 5px black;
         transition: transform 0.5s;
@@ -165,7 +170,15 @@
         color: #e5ddca;
         font-style: normal;
       }
-
+      @media screen and (max-width: 1200px) {
+        .offcanvas {
+          /* background: rgba(255, 255, 255, 0.1);
+          box-shadow: 0 25px 25px rgba(0, 0, 0, 0.2); */
+          /* border: 2px solid rgba(255, 255, 255, 0.5); */
+          /* backdrop-filter: blur(5px); */
+          height: 100vh;
+        }
+      }
       @media screen and (max-width: 599px) {
         .coffee,
         .and,
@@ -232,7 +245,7 @@
                 <a class="nav-link" href="cart.html">CART</a>
               </li>
               <li class="nav-item ps-2 pe-2 ms-2 me-2 total">
-                <a class="nav-link" href="#about us">ABOUT US</a>
+                <a class="nav-link" href="#footer">ABOUT US</a>
               </li>
               <li class="nav-item ps-2 pe-2 ms-2 me-2 total">
                 <a class="nav-link" href="#footer">FIND US</a>
@@ -275,14 +288,39 @@
         </div>
       </div>
     </nav>
-    <div class="col-12 col-xxl-12 pt-5 mt-5 d-flex justify-content-center">
-      <h1 class="display-2 pt-5 fw-light">Life Begin Before Coffee.</h1>
+    <div
+      class="text-center bg-image"
+      style="
+        background-image: url('/assest/background/coffee_cappuccino_pastry_322268_3840x2160.jpg');
+        height: 100vh;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-attachment: fixed;
+        background-position: center;
+      "
+    >
+      <div class="mask" style="background-color: rgba(0, 0, 0, 0.6)">
+        <div class="d-flex justify-content-center align-items-center vh-100">
+          <div class="text-white ps-5 pe-5 m-5">
+            <h1 class="mb-3 display-1 mx-auto">Life Begin After Coffee</h1>
+            <a
+              class="btn btn-outline-light btn-lg mt-3 fs-1 rounded-0 day"
+              href="#collection"
+              role="button"
+              >Start Your Day</a
+            >
+          </div>
+        </div>
+      </div>
     </div>
+    <!-- <div class="col-12 col-xxl-12 pt-5 mt-5 d-flex justify-content-center">
+      <h1 class="display-2 pt-5 fw-light">Life Begin Before Coffee.</h1>
+    </div> -->
     <div class="container">
       <div class="row">
-        <div class="products">
+        <div id="collection" class="products">
           <!-- render product here -->
-        </div>
+          <!-- </div>
         <div class="col-12 col-sm-4 col-md-3 gx-3 gy-3">
           <div class="card">
             <img
@@ -301,8 +339,8 @@
               </div>
             </div>
           </div>
-        </div>
-        <!-- <div class="col-12 col-sm-4 col-md-3 gx-3 gy-3">
+        </div> -->
+          <!-- <div class="col-12 col-sm-4 col-md-3 gx-3 gy-3">
           <div class="card">
             <img
               src="assest/Toffee-Nut-Cream-Cold-Brew-.jpeg"
@@ -435,6 +473,7 @@
             </div>
           </div>
         </div> -->
+        </div>
       </div>
     </div>
 

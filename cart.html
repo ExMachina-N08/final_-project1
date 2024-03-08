@@ -58,8 +58,10 @@
       .navbar {
         display: flex;
         justify-content: space-between;
-        background: #c8733b;
-        height: 120px;
+        background: rgba(255, 255, 255, 0.1);
+        box-shadow: 0 25px 25px rgba(0, 0, 0, 0.2);
+        backdrop-filter: blur(5px);
+        height: 100px;
         /* overflow: hidden; */
         z-index: 10;
       }
@@ -74,7 +76,7 @@
         position: absolute;
       }
       .coffee {
-        color: #713c18;
+        color: #e5dcca;
         font-size: 33px;
         font-family: "Porter Sans Block";
         font-weight: 400;
@@ -82,7 +84,7 @@
         text-align: center;
       }
       .and {
-        color: #713c18;
+        color: #e5dcca;
         font-size: 33px;
         font-family: Playfair Display;
         font-weight: 400;
@@ -97,8 +99,9 @@
           word-wrap: break-word; }*/
 
       .logoimg {
-        width: 104px;
-        height: 100px;
+        width: 75px;
+        height: 90px;
+        padding-bottom: 20px;
       }
       .menu {
         margin-right: 25px;
@@ -140,7 +143,15 @@
       input[type="number"] {
         -moz-appearance: textfield;
       }
-
+      @media screen and (max-width: 1200px) {
+        .offcanvas {
+          /* background: rgba(255, 255, 255, 0.1);
+          box-shadow: 0 25px 25px rgba(0, 0, 0, 0.2); */
+          /* border: 2px solid rgba(255, 255, 255, 0.5); */
+          /* backdrop-filter: blur(5px); */
+          height: 100vh;
+        }
+      }
       @media screen and (max-width: 599px) {
         .coffee,
         .and,

@@ -13,7 +13,7 @@ function renderSubTotal() {
   if (totalItems === 0) {
     totalItemEL.innerHTML = `
     <li class="nav-item">
-    <a class="nav-link" href="cart.html">Cart</a>
+    <a class="nav-link" href="cart.html">CART</a>
   </li>`;
   } else {
     totalItemEL.innerHTML = `
