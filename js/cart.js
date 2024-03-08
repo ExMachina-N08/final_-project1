@@ -95,7 +95,7 @@ function renderSubTotal() {
   <h1 class="text-light subtotal">$${totalPrice}</h1>
 </div>`;
   totalItemEL.innerHTML = `<p class="mb-5 text-center">
-  <i class="text-info font-weight-bold">${totalItems}</i> items in your cart
+  <span class="text-info font-weight-bold">${totalItems}</span> items in your cart
   </p>
 `;
 }
