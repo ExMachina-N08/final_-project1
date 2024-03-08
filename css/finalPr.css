@@ -4,7 +4,8 @@
   box-sizing: border-box;
 }
 body {
-  background-image: url(/assest/background/coffee5.jpg);
+  /* background-image: url(/assest/background/coffee5.jpg); */
+  background-color: black;
   min-height: 100vh;
   background-size: cover;
   background-repeat: no-repeat;
@@ -69,18 +70,17 @@ footer {
   margin-right: 25px;
 }
 .nav-item {
-  /* width: 80px;
-      height: 44px;
-      top: 40px;
-      position: absolute; */
   color: #04aa6d;
-  font-size: 30px;
-  font-family: Oleo Script;
+  font-size: 25px;
+  font-family: "Sodo sans";
   font-weight: 400;
   /* word-wrap: break-word; */
 }
 .nav-link {
   color: currentColor;
+}
+.nav-link:hover {
+  color: #fff;
 }
 .navlink.active a {
   color: red;
@@ -175,6 +175,21 @@ footer {
   font-size: 12px;
   color: #e5ddca;
   font-style: normal;
+}
+.carousel-item img {
+  object-fit: cover;
+  object-position: center;
+}
+
+.carousel-item {
+  /* height: 500px; */
+  overflow: hidden;
+}
+.owl-carousel .owl-stage {
+  transition-timing-function: linear !important;
+}
+.owl-dots.owl-dot-clone {
+  margin-top: 80px;
 }
 @media screen and (max-width: 983px) {
   .offcanvas {

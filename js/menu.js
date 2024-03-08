@@ -1,35 +1,8 @@
+//cart array
+let cart = JSON.parse(localStorage.getItem("CART")) || [];
 // SELECT ELEMENT
 const productsEl = document.querySelector(".row");
 const totalItemEL = document.querySelector(".total");
-
-//RENDER PRODUCT
-function renderProducts() {
-  productList.forEach((product) => {
-    productsEl.innerHTML += `<div class="col-12 col-sm-4 col-md-3 gx-4 gy-4">
-          <div class="card">
-            <img
-              src="${product.imgsScr}"
-              class="card-img-top"
-              alt="..."
-            />
-            <div class="card-body ">
-              <h5 class="card-title fw-bold">${product.name}</h5>
-              <p class="card-text text-sm-start lh-sm">
-                Some quick example text to build on the card title
-              </p>
-              <h5 class="card-text text-md-start">$${product.price}</h5>
-              <div class="d-grid gap-2 d-md-flex justify-content-end">
-                <a class="btn btn-primary added" onClick="addToCart(${product.id});" >Add to Cart</a>
-              </div>
-            </div>
-          </div>
-        </div>`;
-  });
-}
-renderProducts();
-
-//cart array
-let cart = JSON.parse(localStorage.getItem("CART")) || [];
 //ADD TO CART
 function addToCart(id) {
   // check if product already exist in cart
@@ -42,6 +15,7 @@ function addToCart(id) {
       ...item,
       quantity: 1,
     });
+
     //update cart alert
     let totalItems = 0;
     cart.forEach((item) => {
@@ -50,12 +24,12 @@ function addToCart(id) {
     if (totalItems === 0) {
       totalItemEL.innerHTML = `
       <li class="nav-item">
-      <a class="nav-link" href="cart.html">Cart</a>
+      <a class="nav-link" href="cart.html">CART</a>
     </li>`;
     } else {
       totalItemEL.innerHTML = `
     <li class="nav-item">
-          <a class="nav-link" href="cart.html">Cart
+          <a class="nav-link" href="cart.html">CART
           <i class="order-item rounded-circle"
               style="padding-right: 3px; padding-left: 2px">${totalItems}</i>
               </a>
@@ -77,12 +51,12 @@ function renderSubTotal() {
   if (totalItems === 0) {
     totalItemEL.innerHTML = `
     <li class="nav-item">
-    <a class="nav-link" href="cart.html">Cart</a>
+    <a class="nav-link" href="cart.html">CART</a>
   </li>`;
   } else {
     totalItemEL.innerHTML = `
    <li class="nav-item">
-        <a class="nav-link" href="cart.html">Cart
+        <a class="nav-link" href="cart.html">CART
         <i class="order-item rounded-circle"
             style="padding-right: 3px; padding-left: 2px">${totalItems}</i>
             </a>
@@ -90,3 +64,40 @@ function renderSubTotal() {
   }
 }
 renderSubTotal();
+
+//RENDER PRODUCT
+function renderProducts() {
+  productList.forEach((product) => {
+    let flagClass = false;
+    console.log(cart);
+    if (cart.lenght > 0) {
+      cart.map((item) => {
+        if (item.id == product.id) flagClass = true;
+      });
+    }
+    productsEl.innerHTML += `<div class="col-12 col-xl-3 col-lg-4 col-sm-12 col-md-6 gx-5 gy-5">
+          <div class="card">
+            <img
+              src="${product.imgsScr}"
+              class="card-img-top"
+              alt="..."
+            />
+            <div class="card-body ">
+              <h5 class="card-title fw-bold">${product.name}</h5>
+              <p class="card-text text-sm-start lh-sm">
+                Some quick example text to build on the card title
+              </p>
+              <h5 class="card-text text-md-start">$${product.price}</h5>
+              <div class="d-grid gap-2 d-md-flex justify-content-end">
+                <a class="btn btn-primary added ${
+                  flagClass ? "added" : ""
+                }" onClick="addToCart(${
+      product.id
+    });" >${flagClass}Add to Cart</a>
+              </div>
+            </div>
+          </div>
+        </div>`;
+  });
+}
+renderProducts();

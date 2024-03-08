@@ -18,7 +18,7 @@ function renderSubTotal() {
   } else {
     totalItemEL.innerHTML = `
    <li class="nav-item">
-        <a class="nav-link" href="cart.html">Cart
+        <a class="nav-link" href="cart.html">CART
         <i class="order-item rounded-circle"
             style="padding-right: 3px; padding-left: 2px">${totalItems}</i>
             </a>

@@ -22,204 +22,30 @@
       href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap"
       rel="stylesheet"
     />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/owl.carousel.min.css" />
+    <link rel="stylesheet" href="css/owl.theme.default.min.css" />
     <link
       rel="PorterSansBlock-Regular"
       href="fonts/PorterSansBlock-Regular.ttf"
     />
     <link rel="sodo-sans-6" href="fonts/sodo-sans-6.ttf" />
-    <link rel="finalPr" href="finalPr.css" />
+    <link rel="stylesheet" href="/css/finalPr.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+    />
   </head>
   <body>
-    <style>
-      * {
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-      }
-      body {
-        background: #1c4e42;
-      }
-      .navbar {
-        display: flex;
-        justify-content: space-between;
-        background: #c8733b;
-        height: 120px;
-        /* overflow: hidden; */
-        z-index: 10;
-      }
-      .navbar-brand {
-        margin-left: 25px;
-      }
-      .CoffeeTea {
-        width: 541px;
-        height: 48px;
-        left: 143px;
-        top: 33px;
-        position: absolute;
-      }
-      .coffee {
-        color: #713c18;
-        font-size: 33px;
-        font-family: "Porter Sans Block";
-        font-weight: 400;
-        /* word-wrap: break-word; */
-        text-align: center;
-      }
-      .and {
-        color: #713c18;
-        font-size: 33px;
-        font-family: Playfair Display;
-        font-weight: 400;
-        text-align: center;
-        /* word-wrap: break-word; */
-      }
-      /* .tea {
-          color: #713c18;
-          font-size: 33px;
-          font-family: Porter Sans Block;
-          font-weight: 400;
-          word-wrap: break-word; }*/
-
-      .logoimg {
-        width: 104px;
-        height: 100px;
-      }
-      .menu {
-        margin-right: 25px;
-      }
-      .nav-item {
-        /* width: 80px;
-          height: 44px;
-          top: 40px;
-          position: absolute; */
-        color: #713c18;
-        font-size: 30px;
-        font-family: Oleo Script;
-        font-weight: 400;
-        /* word-wrap: break-word; */
-      }
-      .nav-link {
-        color: currentColor;
-      }
-      .navlink.active a {
-        color: red;
-      }
-      .cart {
-        /* width: 90px;
-        height: 50px; */
-        /* left: 95%;
-          top: 40px;
-          position: absolute;
-          color: #713c18;
-          font-size: 30px;
-          font-family: Oleo Script;
-          font-weight: 400;
-          word-wrap: break-word;
-          text-align: center; */
-      }
-      .coffee-cup {
-        /* width: 1204.05px;
-        height: 1084.12px; */
-        max-width: 100%;
-        left: 31%;
-        bottom: 0px;
-        position: absolute;
-        border-radius: 19px;
-      }
-      .header1 {
-        width: 535px;
-        height: 468px;
-        left: 175px;
-        top: 294px;
-        position: absolute;
-      }
-      .quote {
-        color: #e5ddca;
-        font-size: 100px;
-        font-family: Oleo Script;
-        font-weight: 400;
-        word-wrap: break-word;
-        width: 819px;
-        height: 280px;
-        text-shadow: 5px 2px 8px rgb(36, 35, 35);
-      }
-      .logo {
-        width: 104px;
-        height: 100px;
-        left: 28px;
-        top: 7px;
-        position: absolute;
-        justify-content: center;
-        align-items: center;
-        display: inline-flex;
-      }
-      .logoimg {
-        width: 104px;
-        height: 100px;
-      }
-      .order-now {
-        display: inline-block;
-        text-decoration: none;
-        color: #ffffff;
-        background: #c8733b;
-        /*box-shadow (create shadow in box): right, down, shadow #color code*/
-
-        transition: 0.3s;
-        /* transform(created moving animation): translate[moving direction]: (- mean move left, - mean move up) */
-        transform: translate(2px, 2px);
-        border: none;
-        width: 240px;
-        height: 71px;
-        margin-left: 361px;
-        margin-top: 715px;
-        /* position: absolute; */
-        /* box-shadow: 2px 4px 5px rgba(0, 0, 0, 0.25); */
-        border-radius: 30px;
-        font-size: 40px;
-        font-family: "Oleo Script";
-        font-weight: normal;
-        transition: 0.3s;
-        cursor: pointer;
-      }
-      /* width: 240px;
-          height: 71px;
-          left: 56px;
-          top: 768px;
-          position: absolute;
-          box-shadow: 2px 4px 5px rgba(0, 0, 0, 0.25);
-          border-radius: 30px;
-          background-color: #c8733b; */
-      .order-now:hover {
-        background: #f08b18;
-        box-shadow: 2px 4px 5px rgba(0, 0, 0, 0.25);
-        color: #ffffff;
-      }
-      /*btn:active (created pressed effect of btn)*/
-      .order-now:active {
-        background-color: #ca7412;
-        /*inset created shadow effect inside button*/
-        box-shadow: inset 0px 2px 12px #ca7412;
-        transform: translate(3.5px, 5px);
-        transition: 0.1s;
-      }
-      .order-item {
-        background-color: #e50037;
-        font-size: 12px;
-        color: #e5ddca;
-        font-style: normal;
-      }
-      @media screen and (max-width: 599px) {
-        .coffee,
-        .and,
-        .tea {
-          display: none;
-        }
-      }
-    </style>
-    <nav class="navbar navbar-expand-lg fixed-top">
+    <nav class="navbar navbar-expand-xl fixed-top">
       <div class="container-fluid">
         <div class="navbar-brand">
-          <div class="left flex-lg-row">
+          <div class="flex-lg-row">
             <a class="navbar-brand" href="final-landing.html">
               <img
                 class="logoimg"
@@ -259,14 +85,20 @@
           </div>
           <div class="offcanvas-body">
             <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
-              <li class="nav-item">
-                <a class="nav-link" aria-current="page" href="menu-page.html"
-                  >Menu</a
-                >
+              <li class="nav-item ps-2 pe-2 ms-2 me-2">
+                <a class="nav-link" aria-current="page" href="menu-page.html">MENU</a>
               </li>
-              <li class="nav-item total">
-                <a class="nav-link" href="cart.html">Cart</a>
+              <li class="nav-item ps-2 pe-2 ms-2 me-2 total">
+                <a class="nav-link" href="cart.html">CART</a>
               </li>
+              <li class="nav-item ps-2 pe-2 ms-2 me-2 total">
+                <a class="nav-link" href="#about us">OUR STORY</a>
+              </li>
+              <li class="nav-item ps-2 pe-2 ms-2 me-2 total">
+                <a class="nav-link" href="#footer">FIND US</a>
+              </li>
+
+              
               <!-- <li class="nav-item dropdown">
                 <a
                   class="nav-link dropdown-toggle"
@@ -279,7 +111,9 @@
                 </a>
                 <ul class="dropdown-menu">
                   <li><a class="dropdown-item" href="#">Action</a></li>
-                  <li><a class="dropdown-item" href="#">Another action</a></li>
+                  <li>
+                    <a class="dropdown-item" href="#">Another action</a>
+                  </li>
                   <li>
                     <hr class="dropdown-divider" />
                   </li>
@@ -287,119 +121,236 @@
                     <a class="dropdown-item" href="#">Something else here</a>
                   </li>
                 </ul>
-              </li> -->
-            </ul>
+              </li>
+            </ul> -->
             <!-- <form class="d-flex mt-3" role="search">
-              <input
-                class="form-control me-2"
-                type="search"
-                placeholder="Search"
-                aria-label="Search"
-              />
-              <button class="btn btn-outline-success" type="submit">
-                Search
-              </button>
-            </form> -->
+                  <input
+                    class="form-control me-2"
+                    type="search"
+                    placeholder="Search"
+                    aria-label="Search"
+                  />
+                  <button class="btn btn-outline-success" type="submit">
+                    Search
+                  </button>
+                </form> -->
           </div>
         </div>
       </div>
     </nav>
-    <img class="coffee-cup" src="assest/SeekPng.com_coffee-png_368227.png" />
-    <div class="header1">
-      <h1 class="quote">
-        Life Begins <br />
-        <span style="margin-left: 20%">After Coffee.</span><br />
-      </h1>
-      <p
+
+    <div class="container-fluid d-flex flex-column">
+      
+      <div
+        class="text-center bg-image"
         style="
-          color: white;
-          font-size: 25px;
-          font-family: 'SoDo Sans Light';
-          /* font-weight: 600; */
-          line-height: 40px;
-          word-wrap: break-word;
-          text-align: center;
-          width: 117%;
-          height: 80px;
+          background-image: url('/assest/background/coffeeshop1.jpg');
+          height: 100vh;
+          background-repeat: no-repeat;
+          background-size: cover;
         "
       >
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse in
-        tortor tincidunt, rhoncus odio
-      </p>
-    </div>
-    <div class="order-button">
-      <a class="order" href="menu-page.html">
-        <button class="order-now">Order Now</button>
-      </a>
-    </div>
-    <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
-      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
-      crossorigin="anonymous"
-    ></script>
-    <script src="/js/productList.js"></script>
-    <script src="/js/finalJs.js"></script>
-  </body>
-  <br />
-  <br />
-  <br />
-  <br />
-  <br />
-  <br />
-  <br />
-  <br />
-  <br />
-  <!-- Remove the container if you want to extend the Footer to full width. -->
-  <!-- <div class="container-fluid my-5"> -->
-  <footer
-    class="text-white text-center text-lg-start"
-    style="background-color: #23242a"
-  >
-    <!-- Grid container -->
-    <div class="container p-4">
-      <!--Grid row-->
-      <div class="row mt-4">
-        <!--Grid column-->
-        <div class="col-lg-4 col-md-12 mb-4 mb-md-0">
-          <h5 class="text-uppercase mb-4">About company</h5>
-
-          <p>
-            At vero eos et accusamus et iusto odio dignissimos ducimus qui
-            blanditiis praesentium voluptatum deleniti atque corrupti.
-          </p>
-
-          <p>
-            Blanditiis praesentium voluptatum deleniti atque corrupti quos
-            dolores et quas molestias.
-          </p>
-
-          <div class="mt-4">
-            <!-- Facebook -->
-            <a type="button" class="btn btn-floating btn-warning btn-lg"
-              ><i class="fab fa-facebook-f"></i
-            ></a>
-            <!-- Dribbble -->
-            <a type="button" class="btn btn-floating btn-warning btn-lg"
-              ><i class="fab fa-dribbble"></i
-            ></a>
-            <!-- Twitter -->
-            <a type="button" class="btn btn-floating btn-warning btn-lg"
-              ><i class="fab fa-twitter"></i
-            ></a>
-            <!-- Google + -->
-            <a type="button" class="btn btn-floating btn-warning btn-lg"
-              ><i class="fab fa-google-plus-g"></i
-            ></a>
-            <!-- Linkedin -->
+        <div class="mask" style="background-color: rgba(0, 0, 0, 0.6)">
+          <div class="d-flex justify-content-center align-items-center vh-100">
+            <div class="text-white ps-5 pe-5 m-5">
+              <h1 class="mb-3 mx-auto">
+                <img
+                  class="img-fluid"
+                  src="/assest/coffeehouse2invertedw.png"
+                  alt=""
+                  srcset=""
+                />
+              </h1>
+              <h4 class="mb-3 mt-3 lead fs-3 ps-xxl-5 pe-xxl-5">
+                Quisque sit amet posuere ex. Nullam facilisis leo vitae enim
+                finibus hendrerit. Cras sit amet eros et orci venenatis
+                volutpat.
+              </h4>
+              <a
+                class="btn btn-outline-light btn-lg mt-3"
+                href="#!"
+                role="button"
+                >Take A Sip</a
+              >
+            </div>
           </div>
         </div>
-        <!--Grid column-->
+      </div>
+      <div
+        class="intro container d-xl-flex d-md-flex mt-xxl-5 mt-md-5 mb-xxl-5 mb-md-5 p-xl-4 pb-md-3"
+      >
+        <div
+          class="landing-qoute col-xxl-6 col-xl-6 col-lg-6 col-md-6 mt-xl-5 pe-md-3 p-xxl-5 ps-xl-2 p-sm-3"
+        >
+          <h1 class="quote display-2">
+            Enjoy Your <br />
+            <span class="after-coffee">Morning Coffee.</span>
+          </h1>
 
-        <!--Grid column-->
-        <div class="col-lg-4 col-md-6 mb-4 mb-md-0">
-          <h5 class="text-uppercase mb-4 pb-1">OUR STORE</h5>
+          <p class="explain lead fs-2 fs-4 fs-5 fs-6 w-60">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
+            in tortor tincidunt, rhoncus odio
+          </p>
+          <button
+            class="order-now mt-xl-5 mt-md-3 mb-sm-5"
+            href="menu-page.html"
+          >
+            Order Now
+          </button>
+        </div>
+        <div
+          class="col-xxl-5 col-xl-5 col-lg-5 col-md-6 col-sm-10 mt-md-4 p-xxl-5"
+          style="overflow: hidden"
+        >
+          <div class="owl-carousel">
+            <div class="coffee-pics item">
+              <img
+                src="/assest/cookie-cream.webp"
+                class="d-block w-100"
+                alt="..."
+              />
+            </div>
+            <div class="coffee-pics item">
+              <img
+                src="/assest/caramel machiato.png"
+                class="d-block w-100"
+                alt="..."
+              />
+            </div>
+            <div class="coffee-pics item">
+              <img
+                src="/assest/Mocha_Cookie_Crumble.max-825x550.jpg"
+                class="d-block w-100"
+                alt="..."
+              />
+            </div>
+          </div>
+          <!-- <button
+            class="carousel-control-prev"
+            type="button"
+            data-bs-target="#carouselExampleIndicators"
+            data-bs-slide="prev"
+          >
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+          </button>
+          <button
+            class="carousel-control-next"
+            type="button"
+            data-bs-target="#carouselExampleIndicators"
+            data-bs-slide="next"
+          >
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+          </button> -->
+        </div>
+        <!-- <div
+          class="coffee-pics col-xxl-5 col-xl-5 col-lg-5 col-md-6 col-sm-10 mt-md-4"
+        >
+          <img
+            class="img-fluid rounded-2"
+            src="/assest/caramel machiato.png"
+            alt="img"
+          />
+        </div> -->
+      </div>
 
-          <!-- <div class="form-outline form-white mb-4">
+      <section>
+        <div
+          class="intro container d-lg-flex d-md-flex mt-xxl-3 mt-md-5 mb-xxl-5 mb-md-5 p-xl-4 pb-md-3"
+        >
+          <div class="col-xxl-6 col-xl-6 col-lg-5 col-md-6 col-sm-10 mt-md-4">
+            <img
+              class="img-fluid"
+              src="/assest/background/caffemauro-bg-professionale-5.jpg"
+              alt=""
+            />
+          </div>
+          <div
+            class="landing-qoute col-xxl-6 col-xl-6 col-lg-6 col-md-6 mt-xxl-3 pe-md-3 ps-xl-5 p-sm-3"
+            id="about us"
+          >
+            <h3 style="color: #ffff">OUT STORY</h3>
+            <h1 class="quote display-4">consectetur adipiscing elit.</h1>
+
+            <p class="explain lead fs-6 w-60">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc
+              egestas, magna vitae tincidunt viverra, odio quam gravida ipsum,
+              vitae pellentesque nibh lorem sed lectus. Sed nec fringilla felis,
+              vel volutpat massa.
+              <br />
+              Curabitur aliquet augue ac felis aliquam pharetra. Donec ultrices
+              turpis id mi malesuada, nec vulputate elit luctus. <br />
+              Quisque sit amet posuere ex. Nullam facilisis leo vitae enim
+              finibus hendrerit. Cras sit amet eros et orci venenatis volutpat.
+              Quisque eu purus sed nisi rutrum venenatis eget at ante. Ut
+              scelerisque nunc nec tortor hendrerit, a mattis felis dictum.
+              Nullam interdum nibh pharetra felis vulputate aliquam. arcu.
+            </p>
+          </div>
+        </div>
+      </section>
+    </div>
+    <footer
+      class="text-white text-center text-lg-start"
+      style="background-color: #23242a"
+      id="footer"
+    >
+      <!-- Grid container -->
+      <div class="container p-4">
+        <!--Grid row-->
+        <div class="row mt-4">
+          <!--Grid column-->
+          <div class="col-lg-4 col-md-12 mb-4 mb-md-0">
+            <h5 class="text-uppercase mb-4">About company</h5>
+
+            <p>
+              At vero eos et accusamus et iusto odio dignissimos ducimus qui
+              blanditiis praesentium voluptatum deleniti atque corrupti.
+            </p>
+
+            <p>
+              Blanditiis praesentium voluptatum deleniti atque corrupti quos
+              dolores et quas molestias.
+            </p>
+
+            <div class="mt-4">
+              <!-- Facebook -->
+              <a
+                type="button"
+                class="btn btn-floating btn-warning btn-sm rounded-circle"
+                ><i class="bi bi-facebook"></i
+              ></a>
+              <!-- Dribbble -->
+              <a
+                type="button"
+                class="btn btn-floating btn-warning btn-sm rounded-circle"
+                ><i class="bi bi-threads"></i
+              ></a>
+              <!-- Twitter -->
+              <a
+                type="button"
+                class="btn btn-floating btn-warning btn-sm rounded-circle"
+                ><i class="bi bi-twitter-x"></i
+              ></a>
+              <!-- Google + -->
+              <a
+                type="button"
+                class="btn btn-floating btn-warning btn-sm rounded-circle"
+                ><i class="bi bi-google"></i
+              ></a>
+              <!-- Linkedin -->
+            </div>
+          </div>
+          <!--Grid column-->
+
+          <!--Grid column-->
+          <div class="col-lg-4 col-md-6 mb-4 mb-md-0">
+            <h5 class="text-uppercase mb-4 pb-1 ps-xxl-2 ms-xxl-4">
+              OUR STORE
+            </h5>
+
+            <!-- <div class="form-outline form-white mb-4">
             <input
               type="text"
               id="formControlLg"
@@ -417,62 +368,108 @@
               <div class="form-notch-trailing"></div>
             </div>
           </div> -->
+            <ul class="fa-ul">
+              <li class="mb-3">
+                <span class="fa-li"><i class="fas fa-home"></i></span
+                ><span class="ms-2">New York, NY 10012, US</span>
+              </li>
+              <li class="mb-3">
+                <span class="fa-li"><i class="fas fa-envelope"></i></span
+                ><span class="ms-2">info@example.com</span>
+              </li>
+              <li class="mb-3">
+                <span class="fa-li"><i class="fas fa-phone"></i></span
+                ><span class="ms-2">+ 01 234 567 88</span>
+              </li>
+              <li class="mb-3">
+                <span class="fa-li"><i class="fas fa-print"></i></span
+                ><span class="ms-2">+ 01 234 567 89</span>
+              </li>
+            </ul>
+          </div>
+          <!--Grid column-->
 
-          <ul class="fa-ul" style="margin-left: 1.65em">
-            <li class="mb-3">
-              <span class="fa-li"><i class="fas fa-home"></i></span
-              ><span class="ms-2">New York, NY 10012, US</span>
-            </li>
-            <li class="mb-3">
-              <span class="fa-li"><i class="fas fa-envelope"></i></span
-              ><span class="ms-2">info@example.com</span>
-            </li>
-            <li class="mb-3">
-              <span class="fa-li"><i class="fas fa-phone"></i></span
-              ><span class="ms-2">+ 01 234 567 88</span>
-            </li>
-            <li class="mb-3">
-              <span class="fa-li"><i class="fas fa-print"></i></span
-              ><span class="ms-2">+ 01 234 567 89</span>
-            </li>
-          </ul>
+          <!--Grid column-->
+          <div class="col-lg-4 col-md-6 mb-4 mb-md-0">
+            <h5 class="text-uppercase mb-4">Opening hours</h5>
+
+            <table class="table text-center text-white">
+              <tbody class="font-weight-normal">
+                <tr>
+                  <td>Mon - Thu:</td>
+                  <td>8am - 9pm</td>
+                </tr>
+                <tr>
+                  <td>Fri - Sat:</td>
+                  <td>8am - 1am</td>
+                </tr>
+                <tr>
+                  <td>Sunday:</td>
+                  <td>9am - 10pm</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <!--Grid column-->
         </div>
-        <!--Grid column-->
-
-        <!--Grid column-->
-        <div class="col-lg-4 col-md-6 mb-4 mb-md-0">
-          <h5 class="text-uppercase mb-4">Opening hours</h5>
-
-          <table class="table text-center text-white">
-            <tbody class="font-weight-normal">
-              <tr>
-                <td>Mon - Thu:</td>
-                <td>8am - 9pm</td>
-              </tr>
-              <tr>
-                <td>Fri - Sat:</td>
-                <td>8am - 1am</td>
-              </tr>
-              <tr>
-                <td>Sunday:</td>
-                <td>9am - 10pm</td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
-        <!--Grid column-->
+        <!--Grid row-->
       </div>
-      <!--Grid row-->
-    </div>
-    <!-- Grid container -->
+      <!-- Grid container -->
 
-    <!-- Copyright -->
-    <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2)">
-      © 2020 Copyright:
-      <a class="text-white" href="#">Lorem.com</a>
-    </div>
-    <!-- Copyright -->
-  </footer>
+      <!-- Copyright -->
+      <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2)">
+        © 2020 Copyright:
+        <a class="text-white" href="#">Lorem.com</a>
+      </div>
+      <!-- Copyright -->
+    </footer>
+
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
+      integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+      crossorigin="anonymous"
+    ></script>
+    <script src="/js/owl.carousel.js"></script>
+    <script src="/js/productList.js"></script>
+    <script src="/js/finalJs.js"></script>
+    <script>
+      // owl carousel
+      $(document).ready(function () {
+        $(".owl-carousel").owlCarousel({
+          items: 1,
+          dots: true,
+          autoplay: true,
+          autoplayTimeout: 3000,
+          smartSpeed: 1000,
+          slideTransition: "linear",
+          lazyLoadEager: true,
+          nav: false,
+          loop: true,
+        });
+      });
+
+      // Create on click event for clone
+      $(".owl-dot-clone .owl-dot").on("click", function () {
+        var owl = $(this).closest(".custom1");
+        owl.trigger("to.owl.carousel", [$(this).index(), 300]);
+      });
+    </script>
+  </body>
+  <!-- <br />
+  <br />
+  <br />
+  <br />
+  <br /> -->
+
+  <!-- Remove the container if you want to extend the Footer to full width. -->
+  <!-- <div class="container-fluid my-5"> -->
+
   <!-- </div> -->
   <!-- End of .container -->
 </html>
