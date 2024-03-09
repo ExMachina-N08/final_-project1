@@ -1,0 +1,118 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  background: #1c4e42;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+footer {
+  margin-top: auto;
+}
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  background: rgba(255, 255, 255, 0.1);
+  box-shadow: 0 25px 25px rgba(0, 0, 0, 0.2);
+  backdrop-filter: blur(5px);
+  height: 100px;
+  /* overflow: hidden; */
+  z-index: 10;
+}
+.navbar-brand {
+  margin-left: 25px;
+}
+.CoffeeTea {
+  width: 541px;
+  height: 48px;
+  left: 143px;
+  top: 33px;
+  position: absolute;
+}
+.coffee {
+  color: #e5dcca;
+  font-size: 33px;
+  font-family: "Porter Sans Block";
+  font-weight: 400;
+  /* word-wrap: break-word; */
+  text-align: center;
+}
+.and {
+  color: #e5dcca;
+  font-size: 33px;
+  font-family: Playfair Display;
+  font-weight: 400;
+  text-align: center;
+  /* word-wrap: break-word; */
+}
+/* .tea {
+      color: #713c18;
+      font-size: 33px;
+      font-family: Porter Sans Block;
+      font-weight: 400;
+      word-wrap: break-word; }*/
+
+.logoimg {
+  width: 75px;
+  height: 90px;
+  padding-bottom: 20px;
+}
+.menu {
+  margin-right: 25px;
+}
+.nav-item {
+  /* width: 80px;
+      height: 44px;
+      top: 40px;
+      position: absolute; */
+  color: #713c18;
+  font-size: 25px;
+  font-family: Sodo Sans;
+  font-weight: 400;
+  /* word-wrap: break-word; */
+}
+.nav-link:hover {
+  color: #fff;
+}
+.active {
+  color: red !important;
+}
+.total {
+  color: antiquewhite;
+}
+.table_custom {
+  --bs-table-bg: transparent !important;
+}
+input {
+  text-align: center;
+  border: none;
+}
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  /* display: none; <- Crashes Chrome on hover */
+  -webkit-appearance: none;
+  margin: 0; /* <-- Apparently some margin are still there even though it's hidden */
+}
+
+input[type="number"] {
+  -moz-appearance: textfield;
+}
+@media screen and (max-width: 1200px) {
+  .offcanvas {
+    background: rgba(255, 255, 255, 0.1);
+    box-shadow: 0 25px 25px rgba(0, 0, 0, 0.2);
+    /* border: 2px solid rgba(255, 255, 255, 0.5); */
+    backdrop-filter: blur(5px);
+    height: 100vh;
+  }
+}
+@media screen and (max-width: 599px) {
+  .coffee,
+  .and,
+  .tea {
+    display: none;
+  }
+}
