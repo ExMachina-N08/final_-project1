@@ -81,12 +81,14 @@ renderCartItem();
 //calculate and render subtotal
 function renderSubTotal() {
   let totalPrice = 0;
+
   let totalItems = 0;
 
   listCart.forEach((item) => {
     totalPrice += item.price * item.quantity;
+    totalPrice = parseFloat(totalPrice.toFixed(2));
+    console.log(totalPrice);
     totalItems += item.quantity;
-    console.log(totalItems);
   });
 
   subtotalEl.innerHTML = `
