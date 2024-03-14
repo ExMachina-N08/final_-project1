@@ -43,9 +43,6 @@ function addToCart(id) {
       ...item,
       quantity: 1,
     });
-    // document.querySelectorAll("added").map((cart) => {
-    //   ca.style.backgroundColor = "red";
-    // });
 
     //update cart alert
     let totalItems = 0;

@@ -27,10 +27,3 @@ function renderSubTotal() {
   }
 }
 renderSubTotal();
-//   totalItemEL.innerHTML = `
-//    <li class="nav-item">
-//         <a class="nav-link" href="cart.html">Cart
-//         <i class="order-item rounded-circle"
-//             style="padding-right: 3px; padding-left: 2px">${totalItems}</i>
-//             </a>
-//     </li>`;
